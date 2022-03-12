@@ -1,37 +1,37 @@
 class Nekoppi {
   #width = 0;
   #height = 0;
-  #targetDiv
+  #target
   #bw
   #vw
   #canvas;
   #ctx
   #background
-  constructor(id, background = "#fff", bodyWidth = 40, viewWidth = 30) {
+  constructor(element, background = "#fff", bodyWidth = 40, viewWidth = 30) {
     this.#bw = bodyWidth;
     this.#vw = viewWidth;
     this.#background = background;
-    this.#targetDiv = document.getElementById(id);
-    if (this.#targetDiv) {
+    this.#target = element;
+    if (this.#target) {
       // 標的要素の子要素を全て削除
-      while (this.#targetDiv.firstChild) {
-        this.#targetDiv.removeChild(this.#targetDiv.firstChild);
+      while (this.#target.firstChild) {
+        this.#target.removeChild(this.#target.firstChild);
       }
 
-      this.#width = this.#targetDiv.clientWidth;
-      this.#height = this.#targetDiv.clientHeight;
+      this.#width = this.#target.clientWidth;
+      this.#height = this.#target.clientHeight;
       this.#canvas = document.createElement('canvas');
       this.#canvas.width = this.#width;
       this.#canvas.height = this.#height;
       this.#ctx = this.#canvas.getContext('2d');
 
-      this.#targetDiv.appendChild(this.#canvas);
+      this.#target.appendChild(this.#canvas);
     }
   }
 
   draw() {
-    this.#width = this.#targetDiv.clientWidth;
-    this.#height = this.#targetDiv.clientHeight;
+    this.#width = this.#target.clientWidth;
+    this.#height = this.#target.clientHeight;
     this.#canvas.width = this.#width;
     this.#canvas.height = this.#height;
     this.#ctx.clearRect(0, 0, this.#width, this.#height);

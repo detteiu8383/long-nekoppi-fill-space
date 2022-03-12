@@ -78,7 +78,7 @@ function makeResizableDiv(div) {
   }
 }
 
-neko = new Nekoppi('neko')
+neko = new Nekoppi(document.getElementById('neko'))
 
 function onResize() {
   neko.draw()
