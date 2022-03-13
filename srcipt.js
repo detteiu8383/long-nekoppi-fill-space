@@ -86,3 +86,5 @@ function onResize() {
 
 makeResizableDiv('.resizable')
 onResize()
+
+console.log("\n   ^_____^\n（三⦿ω⦿三）\n\n NEKOPPI IS\nWATCHING YOU");
