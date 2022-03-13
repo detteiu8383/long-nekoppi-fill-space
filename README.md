@@ -5,6 +5,8 @@
 
 あまりテストもしてません。
 
+サンプル：<https://detteiu8383.github.io/long-nekoppi-fill-space/>
+
 ## 使い方
 
 ```html
